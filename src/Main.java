@@ -1,9 +1,8 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         task_1();
         task_2();
         task_3();
@@ -32,9 +31,10 @@ public class Main {
         System.out.println("Задание 1");
 
         int[] arrInt = new int[3];
-        arrInt[0] = 1;
-        arrInt[1] = 2;
-        arrInt[2] = 3;
+
+        for (int i = 0; i < arrInt.length; i++) {
+            arrInt[i] = i + 1;
+        }
 
         double[] arrDouble = {1.57, 7.654, 9.986};
         int[] arrArbitrary = {7, 54, 986};
@@ -54,40 +54,34 @@ public class Main {
         System.out.println("\nЗадание 2");
 
         int[] arrInt = new int[3];
-        arrInt[0] = 1;
-        arrInt[1] = 2;
-        arrInt[2] = 3;
+        for (int i = 0; i < arrInt.length; i++) {
+            arrInt[i] = i + 1;
+        }
 
         double[] arrDouble = {1.57, 7.654, 9.986};
         int[] arrArbitrary = {7, 54, 986};
 
         for (int i = 0; i < arrInt.length; i++) {
-            if (i != arrInt.length - 1) {
-            System.out.print(arrInt[i] + ", ");
-            }
-            else{
             System.out.print(arrInt[i]);
-                }
+            if (i != arrInt.length - 1) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
         for (int i = 0; i < arrDouble.length; i++) {
+            System.out.print(arrDouble[i]);
             if (i != arrDouble.length - 1) {
-                System.out.print(arrDouble[i] + ", ");
-            }
-            else{
-                System.out.print(arrDouble[i]);
+                System.out.print(", ");
             }
         }
 
         System.out.println();
 
         for (int i = 0; i < arrArbitrary.length; i++) {
+            System.out.print(arrArbitrary[i]);
             if (i != arrArbitrary.length - 1) {
-                System.out.print(arrArbitrary[i] + ", ");
-            }
-            else{
-                System.out.print(arrArbitrary[i]);
+                System.out.print(", ");
             }
         }
         System.out.println();
@@ -113,41 +107,35 @@ public class Main {
         System.out.println("\nЗадание 3");
 
         int[] arrInt = new int[3];
-        arrInt[0] = 1;
-        arrInt[1] = 2;
-        arrInt[2] = 3;
+        for (int i = 0; i < arrInt.length; i++) {
+            arrInt[i] = i + 1;
+        }
 
         double[] arrDouble = {1.57, 7.654, 9.986};
         int[] arrArbitrary = {7, 54, 986};
 
-        for (int i = arrInt.length - 1; i >= 0 ; i--) {
+        for (int i = arrInt.length - 1; i >= 0; i--) {
+            System.out.print(arrInt[i]);
             if (i != 0) {
-                System.out.print(arrInt[i] + ", ");
-            }
-            else{
-                System.out.print(arrInt[i]);
+                System.out.print(", ");
             }
         }
 
         System.out.println();
 
         for (int i = arrDouble.length - 1; i >= 0; i--) {
+            System.out.print(arrDouble[i]);
             if (i != 0) {
-                System.out.print(arrDouble[i] + ", ");
-            }
-            else{
-                System.out.print(arrDouble[i]);
+                System.out.print(", ");
             }
         }
 
         System.out.println();
 
-        for (int i = arrArbitrary.length - 1; i >= 0 ; i--) {
+        for (int i = arrArbitrary.length - 1; i >= 0; i--) {
+            System.out.print(arrArbitrary[i]);
             if (i != 0) {
-                System.out.print(arrArbitrary[i] + ", ");
-            }
-            else{
-                System.out.print(arrArbitrary[i]);
+                System.out.print(", ");
             }
         }
     }
